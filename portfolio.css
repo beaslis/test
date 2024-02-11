@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* text-decoration: none; */
+}
+
+header, footer{
+    background-color: pink;
+}
+header{
+position: sticky;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    color: palevioletred;
+    padding: 2em;
+}
+
+a, a:visited{
+    color: palevioletred;
+    text-decoration: none;
+}
+
+#footer{
+    color: palevioletred;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer>p{
+    padding: 1em;
+}
+
+.img{
+    width: 100%;
+    height: 35%;
+    background-image: url(yada.PNG);
+    background-position: cover;
+}
+
+.card{
+    width: 270px;
+    height: 300px;
+    box-shadow: 3px 3px 12px palegoldenrod;
+    /* margin: auto; */
+    margin: 1em;
+    /* margin-inline: 4rem; */
+}
+
+#gallery{
+    margin: auto;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    flex-wrap: wrap;
+    width: 60vw;
+}
+
+#hamburger{
+    color: palevioletred;
+    display: none;
+    text-align: center;
+    font-size: 24px;
+}
+input[type="checkbox"]{
+    display: none;
+}
+
+@media (max-width:800px){
+    nav{
+        display: none;
+    }
+
+    #hamburger{
+        display: block;
+        padding: 2em;
+    }
+
+    input[type="checkbox"]:checked~nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card{
+        margin-inline: 4rem;
+    }
+
+    a{
+        margin: 1em;
+    }
+}
